@@ -147,7 +147,7 @@ while True:
 			import pyshorteners
 			shortener=pyshorteners.Shortener()
 			url = str(input(Fore.CYAN + "Введите вашу ссылку: "))
-			print(Fore.RED + shortener.tinyurl.short(url))
+			print(Fore.RED + f"Результат: {shortener.tinyurl.short(url)}")
 			on = False
 			while not on:
 				ask = str(input(Fore.MAGENTA + "Вы хотите продолжить? \ny/n\n"))
