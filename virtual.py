@@ -2,7 +2,7 @@ import time
 import random
 import ctypes
 from colorama import init, Fore, Style
-ctypes.windll.kernel32.SetConsoleTitleW("Три в одном")
+ctypes.windll.kernel32.SetConsoleTitleW("Четыре в одном")
 print(Fore.BLUE + Style.BRIGHT + '''
 ██████╗░██╗░░░██╗  ██████╗░███╗░░░███╗██╗████████╗██████╗░░█████╗░
 ██╔══██╗╚██╗░██╔╝  ██╔══██╗████╗░████║██║╚══██╔══╝██╔══██╗██╔══██╗
