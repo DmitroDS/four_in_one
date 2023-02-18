@@ -33,15 +33,12 @@ while True:
 			kolvo = 2
 			print(Fore.RED + "Чтобы выйти, пропишите exit")
 			primer = input(Fore.YELLOW + "Введите пример: ")
-			#if primer == "exit" or "quit":
-				#break
 			if primer == "exit":
 				break
-			print(Fore.RED + f"Результат: {eval(primer)}")
 			try:
-				pass
+				print(Fore.RED + f"Результат: {eval(primer)}")
 			except:
-				raise Exception("ERROR")
+				print("Произошла ошибка")
 	elif choice == "2":
 		print(Fore.BLACK + "Чтобы выйти, пропишите exit")
 		count_player = 0
