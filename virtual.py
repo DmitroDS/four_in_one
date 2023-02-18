@@ -22,7 +22,7 @@ while True:
 	elif kolvo == 2:
 		spaces(3)
 	print(Fore.GREEN + f"Здравствуй {user_name}! Я могу для тебя быть калькулятором, игрой в Камень, Ножницы, Бумага, и я могу быть для тебя печенькой с предсказанием)")
-	choice = str(input(Fore.YELLOW + "1 - Калькулятор\n2 - Камень,Ножницы,Бумага\n3 - Печенье с предсказанием\n4 - Выйти из приложения\nВведите ваш выбор: "))
+	choice = str(input(Fore.YELLOW + "1 - Калькулятор\n2 - Камень,Ножницы,Бумага\n3 - Печенье с предсказанием\n4 - Сократитель ссылок\n5 - Выйти из приложения\nВведите ваш выбор: "))
 	if choice == "1":
 		kalvulator = 1
 		while True:
@@ -137,4 +137,28 @@ while True:
 					print("Неккоректный выбор")
 					
 	elif choice == "4":
+		off = False
+		shorter = 1
+		while not off:
+			if shorter == 1:
+				shorter = 2
+			elif shorter == 2:
+				spaces(3)
+			import pyshorteners
+			shortener=pyshorteners.Shortener()
+			url = str(input(Fore.CYAN + "Введите вашу ссылку: "))
+			print(Fore.RED + shortener.tinyurl.short(url))
+			on = False
+			while not on:
+				ask = str(input(Fore.MAGENTA + "Вы хотите продолжить? \ny/n\n"))
+				if ask == "y":
+					on = True
+					continue
+				elif ask == "n":
+					off = True
+					break
+				else:
+					print(Fore.RED + "Неккоректный выбор")
+	elif choice == "5":
 		break
+
